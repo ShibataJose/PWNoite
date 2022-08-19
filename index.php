@@ -6,4 +6,6 @@
 
     /*adfkhfguskaf*/
 
+    echo "Olá mundo";
+
 ?>
