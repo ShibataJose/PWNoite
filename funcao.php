@@ -15,12 +15,9 @@
     imprimirQuebra();
     echo "Shibata";
     imprimirQuebra();
-    //for($i = 0; $i<5; $i++){
-    //   imprimirQuebra();
-    //}
 
     function imprimirTexto($texto){
-        echo $texto;
+        echo $texto."<br>";
     }
 
     $algumTexto = "qualquer coisa". "20";
@@ -33,36 +30,46 @@
     imprimirQuebra();
 
     function adicao($numero1 ,$numero2){
-        $soma = $numero1 + $numero2;
-        imprimirTexto($soma);
+        return $numero1 + $numero2;
     }
 
     function subtracao($numero1 ,$numero2){
-        $sub = $numero1 - $numero2;
-        imprimirTexto($sub);
+        return $numero1 - $numero2;
     }
 
     function multiplicacao($numero1 ,$numero2){
-        $multi = $numero1 * $numero2;
-        imprimirTexto($multi);
+        return $numero1 * $numero2;
     }
 
     function divisao($numero1 ,$numero2){
-        $div = $numero1 / $numero2;
-        imprimirTexto($div);
+        return $numero1 / $numero2;
     }
 
-    adicao(10,2);
-    imprimirQuebra();
-    subtracao(10,2);
-    imprimirQuebra();
-    multiplicacao(10,2);
-    imprimirQuebra();
-    divisao(10,2);
-    imprimirQuebra();
+    function mediaAr ($numero1 ,$numero2){
+        return ($numero1 + $numero2)/2;
+    }
 
+    imprimirTexto("A soma total é: ".adicao(10,2));
 
+    imprimirTexto("A subtração é: ".subtracao(10,2));
 
+    imprimirTexto("A multiplicaçao é: ".multiplicacao(10,2));
 
+    imprimirTexto("A divisao é: ".divisao(10,2));
+
+    imprimirTexto("A média aritmética é: ".mediaAr(10,8));
+
+    //atividade criar calculadora
+
+    function calculadora($numero1, $numero2, $ope){
+        switch($ope){
+            case '+': return $numero1 + $numero2;
+            case '-': return $numero1 - $numero2;
+            case '*': return $numero1 * $numero2;
+            case '/': return $numero1 / $numero2;
+            default: return "Operação inexistente";
+        }
+    }
+    imprimirTexto("O total do calculo efetuado foi: ".calculadora(10,2,'+'));
 
 ?>
